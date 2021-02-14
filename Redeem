@@ -301,7 +301,7 @@ function lib:NewCheckBox(section, value, status, func)
     return f;
 end
 
-function lib:NewSlider(section, value, default, minvalue, maxvalue, callback)
+function lib:NewSlider(section, value, minvalue, maxvalue, callback)
     -----UI Codes-----
     local Slider = addInstance("TextLabel", {
         Name = "Slider",
@@ -378,7 +378,6 @@ function lib:NewSlider(section, value, default, minvalue, maxvalue, callback)
     
     ----- Default Set-----
     
-    MainSlider.Position = UDim2.new((default - min)/(max - min), 0, 0.5, 0)
     
     -----Main Code-----
     
