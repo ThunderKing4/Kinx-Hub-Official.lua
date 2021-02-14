@@ -1,5 +1,4 @@
 ----------------------------------------------------------------
--- Kinx Lib
 ----------------------------------------------------------------
 -- Essential Varz and Funcs
 
@@ -191,7 +190,7 @@ function lib:NewSection(LibInstance, SectionName)
 
     addInstance("UIListLayout", {
         HorizontalAlignment = Enum.HorizontalAlignment.Top,
-        VerticalAlignment = Enum.HorizontalAlignment.Left
+        VerticalAlignment = Enum.HorizontalAlignment.Left,
         SortOrder = Enum.SortOrder.LayoutOrder,
         Padding = UDim.new(0, 10),
         Parent = scrollingframe
