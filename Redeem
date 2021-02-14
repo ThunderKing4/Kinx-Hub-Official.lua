@@ -190,7 +190,7 @@ function lib:NewSection(LibInstance, SectionName)
     });
 
     addInstance("UIListLayout", {
-        HorizontalAlignment = Enum.HorizontalAlignment.Right,
+        HorizontalAlignment = Enum.HorizontalAlignment.Center,
         SortOrder = Enum.SortOrder.LayoutOrder,
         Parent = scrollingframe
     });
