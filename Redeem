@@ -98,9 +98,10 @@ function lib:NewLib(UIName)
 
     local MainFrame = addInstance("Frame", {
         Name = "MainFrame",
+        AnchorPoint = Vector2.new(0.5,0.5),
         BackgroundColor3 = Color3.fromRGB(40, 40, 40),
         BorderSizePixel = 0,
-        Position = UDim2.new(0.52721566, 0, 0.172161177, 0),
+        Position = UDim2.new(0.5, 0, 0.5, 0),
 		Size = UDim2.new(0, 390, 0, 357),
 		ClipsDescendants = true,
         Parent = screengui
@@ -125,7 +126,7 @@ function lib:NewLib(UIName)
         Name = "LibName",
         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
         BackgroundTransparency = 1.000,
-        Position = UDim2.new(0.025641026, 0, 0.0252100844, 0),
+        Position = UDim2.new(0, 15, 0, 0),
         Size = UDim2.new(0, 121, 0, 53),
         Font = Enum.Font.SourceSans,
         Text = UIName,
@@ -139,8 +140,8 @@ function lib:NewLib(UIName)
         Name = "TabFrame",
         BackgroundColor3 = Color3.fromRGB(40, 40, 40),
         BorderSizePixel = 0,
-        Position = UDim2.new(0, 0, 0.126666665, 0),
-        Size = UDim2.new(0, 115, 0, 262),
+        Position = UDim2.new(0, 0, 0, 40),
+        Size = UDim2.new(1, 0, 0, 60),
         Parent = MainFrame
 	});
 	addInstance("Frame", {
@@ -160,15 +161,20 @@ function lib:NewLib(UIName)
         Parent = TabFrame
     });
 
+    addInstance("UIPadding", {
+        PaddingRight = UDim.new(0, 30),
+        Parent = TabFrame
+    });
+
     return MainFrame;
 
 end
 
 function lib:NewSection(LibInstance, SectionName)
     local btn = addInstance("TextButton", {
-        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-		BackgroundTransparency = 1.000,
+        BackgroundColor3 = Color3.fromRGB(40, 40, 40),
         BorderSizePixel = 0,
+        AutoButtonColor = false,
         Size = UDim2.new(0, 200, 0, 50),
         Font = Enum.Font.SourceSansBold,
         Text = SectionName,
@@ -183,7 +189,7 @@ function lib:NewSection(LibInstance, SectionName)
         BackgroundTransparency = 1.000,
         BorderSizePixel = 0,
         Visible = false;
-        Position = UDim2.new(0, 0, 0.156862751, 0),
+        Position = UDim2.new(0, 0, 0, 80),
         Size = UDim2.new(0, 390, 0, 289),
         ScrollBarThickness = 9,
         Parent = LibInstance
